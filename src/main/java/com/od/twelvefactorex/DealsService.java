@@ -5,11 +5,11 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-public class IdService {
+public class DealsService {
 
 
-    @RequestMapping("/id")
-    public String greeting(@RequestParam(value="id") String name) {
-        return "WhooHoo";
+    @RequestMapping("/deals")
+    public String greeting(@RequestParam(value="id") String id) {
+        return "Deal " + id;
     }
 }
