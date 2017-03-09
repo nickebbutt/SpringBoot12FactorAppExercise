@@ -10,6 +10,13 @@ public class DealsService {
 
     @RequestMapping("/deals")
     public String greeting(@RequestParam(value="id") String id) {
-        return "Deal " + id;
+        switch(id) {
+            case "1" :
+                return "Buy 400 pairs, get one unmatched sock free!";
+            case "2" :
+                return "Free shipping anywhere in the Andromeda Galaxy";
+            default :
+                return "Unknown deal";
+        }
     }
 }
