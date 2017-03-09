@@ -16,7 +16,7 @@ public class DealsService {
             case "2" :
                 return "Free shipping anywhere in the Andromeda Galaxy";
             default :
-                return "Unknown deal";
+                return "A Random Deal " + Math.random();
         }
     }
 }

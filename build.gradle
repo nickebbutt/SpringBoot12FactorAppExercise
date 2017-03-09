@@ -18,7 +18,7 @@ group = 'od'
 
 jar {
     baseName = 'dealservice'
-    version =  '0.1.0'
+    version =  '0.2.0'
 }
 
 repositories {
@@ -48,7 +48,7 @@ task buildDocker(type: Docker, dependsOn: build) {
     push = false
     applicationName = jar.baseName
     dockerfile = file('src/main/docker/Dockerfile')
-    tagVersion = 'v1'
+    tagVersion = 'v2'
     doFirst {
         copy {
             from jar
