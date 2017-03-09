@@ -28,3 +28,14 @@ dependencies {
     compile("org.springframework.boot:spring-boot-starter-web")
     testCompile('org.springframework.boot:spring-boot-starter-test')
 }
+
+task runApp(group: '12factorapp', type: JavaExec) {
+    classpath = sourceSets.main.runtimeClasspath
+//    jvmArgs "-Dfusion.application.logdir=" + System.getProperty("user.dir"),
+//            "-Dcom.sun.management.jmxremote.ssl=false",  //enable the JMX platform MBeans and allow Chorus to publish
+//            "-Dcom.sun.management.jmxremote.authenticate=false",
+//            "-Dcom.sun.management.jmxremote.port=1998",
+//            "-Dorg.chorusbdd.chorus.jmxexporter.enabled=true"
+    main = 'com.od.twelvefactorex.Application'
+//    args 'src/main/webapp', '8080'
+}
